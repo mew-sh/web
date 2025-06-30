@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mewsh - A tidy package manager</title>
+    <meta name="description" content="mewsh is a universal package manager for Linux and macOS. Simple, fast, and cross-platform.">
+    <meta name="keywords" content="package manager, linux, macos, mewsh, install, software">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 0.5rem;
+        }
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .feature-card {
+            background: var(--pico-card-background-color);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--pico-card-border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--pico-primary-color);
+        }
+        .install-section {
+            background: var(--pico-card-background-color);
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            margin: 3rem 0;
+            border: 1px solid var(--pico-card-border-color);
+            text-align: center;
+        }
+        .code-block {
+            background: var(--pico-code-background-color);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            margin: 1.5rem 0;
+            border: 1px solid var(--pico-muted-border-color);
+            font-size: 1.1rem;
+            position: relative;
+            overflow-x: auto;
+        }
+        .code-block code {
+            color: var(--pico-color);
+        }
+        .highlight {
+            color: var(--pico-primary-color);
+            font-weight: bold;
+        }
+        .platform-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: var(--pico-primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .commands-table {
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        .commands-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .commands-table th,
+        .commands-table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--pico-muted-border-color);
+        }
+        .commands-table th {
+            background: var(--pico-card-background-color);
+            font-weight: 600;
+        }
+        .commands-table code {
+            background: var(--pico-code-background-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--pico-muted-border-color);
+            background: var(--pico-card-background-color);
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            border-radius: 0.75rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .cta-section .code-block {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .cta-section .code-block code {
+            color: white;
+            font-weight: 600;
+        }
+        .intro-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .intro-section h2 {
+            margin-bottom: 1rem;
+        }
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>🐱 mewsh</h1>
+            <p>A tidy package manager</p>
+            <p class="tagline">Simple, Fast, and Cross-Platform</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="intro-section">
+            <h2>Why Choose mewsh?</h2>
+            <p><strong>mewsh</strong> is a revolutionary package manager designed to be <strong>incredibly easy to use</strong> and <strong>suitable for everyone</strong>. Whether you're a beginner or an expert, mewsh simplifies software installation across different platforms.</p>
+            
+            <div class="platform-badges">
+                <span class="badge">🐧 Linux</span>
+                <span class="badge">🍎 macOS</span>
+            </div>
+        </section>
+
+        <section class="feature-grid">
+            <div class="feature-card">
+                <h3>🚀 Universal Compatibility</h3>
+                <p>Works seamlessly across Linux and macOS, replacing the need for multiple package managers like apt, brew, snap, and pacman.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Lightning Fast</h3>
+                <p>Optimized for speed and efficiency, making software installation quick and painless.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 Simple Commands</h3>
+                <p>Clean, intuitive syntax that anyone can learn in minutes. No complex configurations required.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📦 Extensive Library</h3>
+                <p>Access to a vast ecosystem of packages including popular tools like Node.js, Bun, Deno, and thousands more.</p>
+            </div>
+        </section>
+
+        <section class="install-section">
+            <h2>🛠️ Quick Installation</h2>
+            <p>Get started with mewsh in just one command:</p>
+            <div class="code-block">
+                <code>bash &lt;(curl https://mewsh.cc/install)</code>
+            </div>
+            <p><small>This command will automatically detect your system and install mewsh with all necessary dependencies.</small></p>
+        </section>
+
+        <section>
+            <h2>📋 Usage Examples</h2>
+            <p>Once installed, using mewsh is incredibly straightforward:</p>
+            
+            <h3>Install Node.js</h3>
+            <div class="code-block">
+                <code>mew install node</code>
+            </div>
+            
+            <h3>Install Multiple Packages</h3>
+            <div class="code-block">
+                <code>mew install bun deno</code>
+            </div>
+            
+            <p>It's that simple! mewsh handles all the complexity behind the scenes, so you can focus on what matters most - building amazing things.</p>
+        </section>
+
+        <section>
+            <h2>🛠️ Common Commands</h2>
+            <div class="commands-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>mew install &lt;package&gt;</code></td>
+                            <td>Install a package</td>
+                        </tr>
+                        <tr>
+                            <td><code>mew remove &lt;package&gt;</code></td>
+                            <td>Remove a package</td>
+                        </tr>
+                        <tr>
+                            <td><code>mew update</code></td>
+                            <td>Update mewsh itself</td>
+                        </tr>
+                        <tr>
+                            <td><code>mew list</code></td>
+                            <td>List installed packages</td>
+                        </tr>
+                        <tr>
+                            <td><code>mew search &lt;term&gt;</code></td>
+                            <td>Search for packages</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>🌟 Key Features</h2>
+            <ul>
+                <li><strong>Cross-Platform:</strong> One tool for Linux and macOS</li>
+                <li><strong>Zero Configuration:</strong> Works out of the box</li>
+                <li><strong>Dependency Management:</strong> Automatically handles dependencies</li>
+                <li><strong>Version Control:</strong> Easy package version management</li>
+                <li><strong>Clean Uninstalls:</strong> Remove packages completely</li>
+                <li><strong>Regular Updates:</strong> Always stay current with the latest packages</li>
+            </ul>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>🚀 Ready to Get Started?</h2>
+                <p>Join thousands of developers who have simplified their workflow with mewsh.</p>
+                <div class="code-block">
+                    <code>bash &lt;(curl https://mewsh.cc/install)</code>
+                </div>
+                <p>After installation, try installing your first package:</p>
+                <div class="code-block">
+                    <code>mew install node</code>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 mewsh Package Manager. Made with ❤️ for developers everywhere.</p>
+            <p><small>Simplifying software installation, one package at a time.</small></p>
+            <p><small>
+                <a href="https://github.com/mewsh/mewsh" target="_blank">GitHub</a> • 
+                <a href="https://docs.mewsh.cc" target="_blank">Documentation</a> • 
+                <a href="https://mewsh.cc" target="_blank">Website</a>
+            </small></p>
+        </div>
+    </footer>
+</body>
+</html>
