@@ -85,7 +85,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Website**: [https://mewsh.cc](https://mewsh.cc)
 - **Documentation**: [https://docs.mewsh.cc](https://docs.mewsh.cc)
-- **Issues**: [GitHub Issues](https://github.com/mewsh/mewsh/issues)
+- **Issues**: [GitHub Issues](https://github.com/mew-sh/mew/issues)
 
 ---
 
